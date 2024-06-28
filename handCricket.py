@@ -30,7 +30,7 @@ def pcbatting():
         pc = computerChoice()
         print(f"Player chose {plyr}, Computer chose {pc}")
         if plyr == pc:
-            print("Player is OUT!")
+            print("Computer is OUT!")
             break
         else:
             score += plyr
