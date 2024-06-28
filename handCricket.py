@@ -33,7 +33,7 @@ def pcbatting():
             print("Computer is OUT!")
             break
         else:
-            score += plyr
+            score += pc
             print(f"Current Score: {score}")
     return score
 def toss():
