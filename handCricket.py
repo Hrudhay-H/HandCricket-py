@@ -10,7 +10,20 @@ def getUserChoice():
                 getUserChoice()
 def computerChoice():
     return random.randint(1, 6)
-def batting():
+def plbatting():
+    score = 0
+    while True:
+        plyr = getUserChoice()
+        pc = computerChoice()
+        print(f"Player chose {plyr}, Computer chose {pc}")
+        if plyr == pc:
+            print("Player is OUT!")
+            break
+        else:
+            score += plyr
+            print(f"Current Score: {score}")
+    return score
+def pcbatting():
     score = 0
     while True:
         plyr = getUserChoice()
@@ -32,10 +45,10 @@ def toss():
         print(f"You chose to {tossChoices[plyrChoice]} first")
         if(plyrChoice == 1):
             print("\nPlayer's turn to bat!")
-            playerScore = batting()
+            playerScore = plbatting()
             print(f"Player's final score: {playerScore}")
             print("\nComputer's turn to bat!")
-            computerScore = batting()
+            computerScore = pcbatting()
             print(f"Computer's final score: {computerScore}")
             if playerScore > computerScore:
                 print("\nPlayer wins!")
@@ -45,10 +58,10 @@ def toss():
                 print("\nIt's a tie!")
         else:
             print("\nComputer's turn to bat!")
-            computerScore = batting()
+            computerScore = pcbatting()
             print(f"Computer's final score: {computerScore}")
             print("\Player's turn to bat!")
-            playerScore = batting()
+            playerScore = plbatting()
             print(f"Player's final score: {playerScore}")
             if playerScore > computerScore:
                 print("\nPlayer wins!")
@@ -62,10 +75,10 @@ def toss():
         print(f"PC chose to {tossChoices[pcChoice]} first")
         if(pcChoice == 1):
             print("\nComputer's turn to bat!")
-            computerScore = batting()
+            computerScore = pcbatting()
             print(f"Computer's final score: {computerScore}")
             print("\Player's turn to bat!")
-            playerScore = batting()
+            playerScore = plbatting()
             print(f"Player's final score: {playerScore}")
             if playerScore > computerScore:
                 print("\nPlayer wins!")
@@ -75,10 +88,10 @@ def toss():
                 print("\nIt's a tie!")
         else:
             print("\nPlayer's turn to bat!")
-            playerScore = batting()
+            playerScore = plbatting()
             print(f"Player's final score: {playerScore}")
             print("\nComputer's turn to bat!")
-            computerScore = batting()
+            computerScore = pcbatting()
             print(f"Computer's final score: {computerScore}")
             if playerScore > computerScore:
                 print("\nPlayer wins!")
