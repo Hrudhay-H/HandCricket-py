@@ -19,7 +19,7 @@ Hand Cricket is a fun game that many of us played during our childhood. This Pyt
 - Keeps track of scores and displays the winner
 
 # Usage
-To start the game, simply run the Python script:
+To start the game, simply run the Python script :
 
 # Rules
 - The game starts with a toss to decide who bats and who bowls.
